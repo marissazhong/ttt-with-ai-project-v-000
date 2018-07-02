@@ -38,7 +38,7 @@ module Players
               other_player_closest[1] = combo
             end
             if other_player_closest[0] = 2
-              puts other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "} + 1
+              puts other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "}
             elsif other_player_closest[0] = 1
               index = other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == other_player}[0]
               if index.even?
