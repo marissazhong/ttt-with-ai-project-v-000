@@ -38,11 +38,9 @@ module Players
             end
           end
         }
-        #puts other_player_closest
         if other_player_closest[0] == 2
           other_player_closest[1].select{|i| board.cells[i] == " "}[0] + 1
         elsif other_player_closest[0] == 1
-          #puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index.even? && index != 4
             other_player_closest[1][1] + 1
