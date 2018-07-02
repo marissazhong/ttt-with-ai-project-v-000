@@ -38,7 +38,7 @@ module Players
                 other_player_closest[0] = other_player_moves
                 other_player_closest[1] = combo
               end
-          }
+            }
             puts other_player_closest
             if other_player_closest[0] = 2
               other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "}[0] + 1
