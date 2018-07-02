@@ -44,6 +44,8 @@ module Players
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index.even? && index != 4
             other_player_closest[1][1] + 1
+          elsif index == 4
+            [0,2,6,8].sample + 1
           else
             [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
           end
