@@ -45,10 +45,9 @@ module Players
           #puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index.even?
-            puts other_player_closest[1][1] + 1
-            other_player_closest[1][1] + 1
+            return other_player_closest[1][1] + 1
           else
-            [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
+            return [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
           end
         end
         # There are two strategies for moving - 1. block the other player from winning 2. pick the best move for yourself
