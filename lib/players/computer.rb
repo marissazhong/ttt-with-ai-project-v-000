@@ -45,7 +45,7 @@ module Players
           #puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index.even?
-            puts "yes it's even"
+            puts other_player_closest[1][1] + 1
             other_player_closest[1][1] + 1
           else
             [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
