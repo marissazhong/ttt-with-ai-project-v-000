@@ -43,24 +43,13 @@ module Players
           other_player_closest[1].select{|i| board.cells[i] == " "}[0] + 1
         elsif other_player_closest[0] == 1
           #puts other_player_closest[1]
-          index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]            
+          index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index.even? && index != 4
             other_player_closest[1][1] + 1
           else
             [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
           end
         end
-        # There are two strategies for moving - 1. block the other player from winning 2. pick the best move for yourself
-
-        # 1. if other player has two in a row, block the third position
-
-        # 2. if other player has one, fill position in one of those solutions
-
-        # 3. otherwise, select the best move for myself
-        # all_moves = valid_combos.flatten
-        # best_move = Hash[0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0]
-        # all_moves.each {|move| best_move[move] += 1}
-        # best_move.max_by {|key,value| value}[0] + 1
       end
     end
   end
