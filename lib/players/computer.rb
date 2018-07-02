@@ -15,6 +15,7 @@ module Players
     end
 
     def move(board)
+      # this does not create a perfect game... to be refined in the future!
       if board.cells[4] == " " #always choose middle position if open
         "5"
       else
