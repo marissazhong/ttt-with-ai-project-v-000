@@ -31,7 +31,7 @@ module Players
           elsif other_check_values.include?(board.cells[combo[0]]) && other_check_values.include?(board.cells[combo[1]]) && other_check_values.include?(board.cells[combo[2]])
             other_player_valid_combos << combo
             other_player_moves = 0
-            combo.each {|position| other_player_moves += 1 if board.cells[position] = other_player}
+            combo.each {|position| other_player_moves += 1 if board.cells[position] == other_player}
             if other_player_moves > other_player_closest[0]
               other_player_closest = [0,0]
               other_player_closest[0] = other_player_moves
