@@ -39,17 +39,17 @@ module Players
             end
           end
         }
-            puts other_player_closest
-            if other_player_closest[0] = 2
-              other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "}[0] + 1
-            elsif other_player_closest[0] = 1
-              index = other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == other_player}[0]
-              if index.even?
-                other_player_closest[1][1] + 1
-              else
-                [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
-              end
-            end
+        puts other_player_closest
+        if other_player_closest[0] = 2
+          other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "}[0] + 1
+        elsif other_player_closest[0] = 1
+          index = other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == other_player}[0]
+          if index.even?
+            other_player_closest[1][1] + 1
+          else
+            [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
+          end
+        end
         # There are two strategies for moving - 1. block the other player from winning 2. pick the best move for yourself
 
         # 1. if other player has two in a row, block the third position
