@@ -40,7 +40,7 @@ module Players
         }
         #puts other_player_closest
         if other_player_closest[0] == 2
-          other_player_closest[1].select{|i| board.cells[other_player_closest[1][i]] == " "}[0] + 1
+          other_player_closest[1].select{|i| board.cells[i] == " "}[0] + 1
         elsif other_player_closest[0] == 1
           puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
