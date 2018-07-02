@@ -40,8 +40,8 @@ module Players
         }
         puts other_player_closest
         if other_player_closest[0] == 2
-          puts "yes 2"
-          other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == " "}[0] + 1
+          puts other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i+1]] == " "}[0]
+          other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i+1]] == " "}[0] + 1
         elsif other_player_closest[0] == 1
           index = other_player_closest[1].each_index.select{|i| board.cells[other_player_closest[1][i]] == other_player}[0]
           if index.even?
