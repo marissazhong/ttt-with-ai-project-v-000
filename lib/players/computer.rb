@@ -40,14 +40,16 @@ module Players
         }
         #puts other_player_closest
         if other_player_closest[0] == 2
-          return other_player_closest[1].select{|i| board.cells[i] == " "}[0] + 1
+          other_player_closest[1].select{|i| board.cells[i] == " "}[0] + 1
         elsif other_player_closest[0] == 1
           #puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
-          if index.even?
-            return other_player_closest[1][1] + 1
+          if index == 4
+
+          elsif index.even?
+            other_player_closest[1][1] + 1
           else
-            return [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
+            [other_player_closest[1][0],other_player_closest[1][2]].sample + 1
           end
         end
         # There are two strategies for moving - 1. block the other player from winning 2. pick the best move for yourself
