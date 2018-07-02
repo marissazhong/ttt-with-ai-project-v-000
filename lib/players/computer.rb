@@ -45,7 +45,7 @@ module Players
           #puts other_player_closest[1]
           index = other_player_closest[1].select{|i| board.cells[i] == other_player}[0]
           if index == 4
-
+            
           elsif index.even?
             other_player_closest[1][1] + 1
           else
