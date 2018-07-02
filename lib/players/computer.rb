@@ -56,10 +56,10 @@ module Players
         # 2. if other player has one, fill position in one of those solutions
 
         # 3. otherwise, select the best move for myself
-        all_moves = valid_combos.flatten
-        best_move = Hash[0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0]
-        all_moves.each {|move| best_move[move] += 1}
-        best_move.max_by {|key,value| value}[0] + 1
+        # all_moves = valid_combos.flatten
+        # best_move = Hash[0,0,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0]
+        # all_moves.each {|move| best_move[move] += 1}
+        # best_move.max_by {|key,value| value}[0] + 1
       end
     end
   end
